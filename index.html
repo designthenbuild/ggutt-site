@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GGUTT · Where business meets design</title>
+<meta name="description" content="How leaders in business, design and tech really think. Conversations, the GGUTT question and experiments by Maria Matloub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Unbounded:wght@400..800&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A0663;--deep:#050338;--pink:#F300AC;--white:#fff;--lilac:#C9C6FF;--line:rgba(201,198,255,.16);--head:'Unbounded',system-ui,sans-serif;--body:'Manrope',system-ui,sans-serif;--logo:'Comfortaa',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--lilac);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--head);color:var(--white);line-height:1.08;letter-spacing:-.02em}
+.eyebrow{font-family:var(--body);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font:700 15px var(--body);color:#fff;border:1.5px solid rgba(255,255,255,.35);transition:background .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--pink);color:#fff;border-color:var(--pink)}
+.btn.pink{background:transparent;border-color:#fff;color:#fff}
+.btn:active,.btn:focus-visible,.btn.pink:hover,.btn.pink:active,.btn.pink:focus-visible{background:var(--pink);border-color:var(--pink);color:#fff;outline:none}
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px}
+.logo img{height:34px;width:auto;display:block}
+.logo{font-family:var(--logo);font-weight:700;font-size:30px;color:#fff;letter-spacing:-.5px;line-height:1}
+.menu{display:none;gap:30px;font-size:15px;font-weight:700;color:#fff}
+.menu a:hover{color:var(--pink)}
+.navr{display:flex;align-items:center;gap:22px}
+.navlink{display:none;font-size:14px;font-weight:700;color:#fff}
+.navlink:hover{color:var(--pink)}
+@media(min-width:900px){.navlink{display:inline}}
+@media(min-width:900px){.menu{display:flex}}
+/* hero */
+.hero{text-align:center;padding:70px 0 30px}
+.hero h1{font-size:clamp(40px,7.4vw,88px);font-weight:600}
+.hero h1 span{color:var(--pink)}
+.hero p{font-size:clamp(18px,2.2vw,22px);margin:22px auto 0;max-width:640px;color:var(--lilac)}
+.listen{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:34px}
+/* library */
+.lib{padding:50px 0 20px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
+.row{display:flex;gap:16px;width:max-content;margin-left:40px;animation:slide 70s linear infinite}
+.row+.row{margin-top:16px;animation-direction:reverse;animation-duration:85s}
+.lib:hover .row{animation-play-state:paused}
+.cover{flex:none;width:220px;height:220px;border-radius:18px;overflow:hidden;display:block;border:2px solid transparent;transition:transform .2s,border-color .2s}
+.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.cover:hover{transform:scale(1.04);border-color:var(--pink)}
+@media(max-width:600px){.cover{width:160px;height:160px}}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.face{flex:none;width:210px;border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s;box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+.face img{width:100%;height:auto;display:block}
+.face:hover{transform:translateY(-4px);box-shadow:0 0 0 2px var(--pink)}
+@media(max-width:600px){.face{width:160px}}
+@media(prefers-reduced-motion:reduce){.row{animation:none}}
+.proof{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 28px;font-size:14px;font-weight:600;padding:26px 0 70px}
+.proof b{color:#fff}
+/* sections */
+section{padding:84px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(30px,4.4vw,48px);font-weight:600;margin-bottom:16px}
+.lead{max-width:620px;font-size:18px}
+.alt{background:var(--deep)}
+/* shows */
+.shows{display:grid;gap:18px;margin-top:36px}
+@media(min-width:860px){.shows{grid-template-columns:1fr 1fr}}
+.show{border:1px solid var(--line);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:160px 1fr;background:rgba(255,255,255,.03)}
+@media(max-width:520px){.show{grid-template-columns:1fr}}
+.show img{width:100%;height:100%;object-fit:cover;aspect-ratio:1}
+.show div{padding:24px}
+.show h3{font-family:var(--logo);font-weight:700;font-size:24px;margin-bottom:8px;letter-spacing:0}
+.show p{font-size:15px}
+.guest-art{display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,#2a1fd0,var(--deep));width:100%;height:100%;min-height:160px}
+.guest-art svg{width:58%;height:auto}
+.show .tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--pink)}
+.show a{display:inline-block;margin-top:14px;font-weight:800;font-size:14px;color:#fff;border-bottom:2px solid var(--pink)}
+/* question */
+.qgrid{display:grid;gap:16px;margin-top:36px}
+@media(min-width:760px){.qgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.qgrid{grid-template-columns:repeat(3,1fr)}}
+.q{border-radius:22px;padding:28px;background:rgba(255,255,255,.04);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.q blockquote{font-family:var(--head);font-weight:500;font-size:20px;line-height:1.3;color:#fff;letter-spacing:-.01em}
+.q blockquote::before{content:"“";color:var(--pink)}
+.q blockquote::after{content:"”";color:var(--pink)}
+.q cite{font-style:normal;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.q.pinkq{background:var(--pink);border-color:var(--pink)}
+.q.pinkq blockquote::before,.q.pinkq blockquote::after{color:#fff}
+.q.pinkq cite{color:#fff}
+/* lab */
+.labhead{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.soon{display:inline-block;color:var(--pink);font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.apps{display:grid;gap:16px;margin-top:36px}
+@media(min-width:760px){.apps{grid-template-columns:repeat(3,1fr)}}
+.app{border-radius:22px;overflow:hidden;border:1px dashed rgba(201,198,255,.35)}
+.app .shot{aspect-ratio:16/10;background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 12px,rgba(255,255,255,.06) 12px 24px);display:grid;place-items:center;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.app div.t{padding:30px 26px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end}
+.app h3{font-size:20px;font-weight:600;margin-bottom:6px}
+.app p{font-size:15px}
+/* host */
+.host{display:grid;gap:28px;align-items:center}
+@media(min-width:860px){.host{grid-template-columns:auto 1fr auto}}
+.host img{width:132px;height:132px;border-radius:50%;object-fit:cover;border:3px solid #fff}
+.host h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:8px}
+footer{padding:34px 0 46px;font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a:hover{color:#fff}
+.preview{background:var(--pink);color:#fff;text-align:center;font-size:13px;font-weight:700;padding:7px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#"><img src="art/ggutt-logo-white.png" alt="ggutt" width="90" height="36"></a>
+    <div class="menu"><a href="#library">Guests</a><a href="#shows">Podcast</a><a href="#question">The GGUTT question</a><a href="#lab">Lab</a><a href="https://mariamatloub.com">Work with Maria</a></div>
+    <div class="navr"><a class="btn pink" href="https://ggutt.substack.com/" target="_blank" rel="noopener">Listen</a></div>
+  </nav>
+  <header class="hero">
+    <h1>Where business<br>meets <span>design.</span></h1>
+    <p>How leaders in business, design and tech really think.</p>
+    <div class="listen" id="listen">
+      <a class="btn" href="https://open.spotify.com/show/3f6umKidYdhdoPnxUMQM2e" target="_blank" rel="noopener">Spotify</a>
+      <a class="btn" href="https://podcasts.apple.com/us/podcast/gguttalks/id1546998038" target="_blank" rel="noopener">Apple Podcasts</a>
+      <a class="btn" href="https://www.youtube.com/@ggutt_hub" target="_blank" rel="noopener">YouTube</a>
+      <a class="btn" href="https://ggutt.substack.com/" target="_blank" rel="noopener">Substack</a>
+    </div>
+  </header>
+</div>
+
+<div class="lib" id="library" style="scroll-margin-top:20px" aria-label="Guest library">
+  <div class="row" id="r1"></div>
+  <div class="row" id="r2"></div>
+</div>
+<div class="wrap proof"><span><b>100+</b> guests</span><span><b>35+</b> countries</span><span><b>150K+</b> downloads since [year]</span></div>
+
+<section id="shows" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Inside gguttalks</p>
+    <h2>Two formats, one podcast.</h2>
+    <div class="shows">
+      <div class="show"><img src="art/conversations.jpg" alt="gguttalks conversations artwork"><div><h3>With guests</h3><p>Long conversations with leaders in business, design and tech about how they really think and decide.</p><span class="tag">Conversations</span></div></div>
+      <div class="show"><img src="art/unfiltered.jpg" alt="gguttalks unfiltered artwork"><div><h3>Unfiltered</h3><p>Maria alone. Short, direct takes on what she sees in business, design and AI.</p><span class="tag">Solo</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="question">
+  <div class="wrap">
+    <p class="eyebrow">The GGUTT question</p>
+    <h2>Every guest gets asked about their GGUTT.</h2>
+    <p class="lead">Do you trust it? When do you follow it? Here's what they said.</p>
+    <div class="qgrid">
+      <figure class="q pinkq"><blockquote>I'm very intuition led.</blockquote><cite>Angela Shen-Hsieh</cite></figure>
+      <figure class="q"><blockquote>I trust my gut a lot more now, but I still record a lot so that I can continue to refine and improve my gut.</blockquote><cite>Nicole Glaros</cite></figure>
+      <figure class="q"><blockquote>Gut helps you because it also allows you to take risks.</blockquote><cite>Silia Abou Arbid</cite></figure>
+      <figure class="q"><blockquote>As a designer, you often are in the position where you have to follow your gut.</blockquote><cite>Gianluca Brugnoli</cite></figure>
+      <figure class="q"><blockquote>I do a lot of things intuitive and that is driven by the empathy.</blockquote><cite>Eric Quint</cite></figure>
+      <figure class="q pinkq"><blockquote>I'm not a gut person.</blockquote><cite>Bernard Moon</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section id="lab" class="alt">
+  <div class="wrap">
+    <div class="labhead">
+      <div><p class="eyebrow">GGUTT Lab</p><h2>Ideas, built.</h2><p class="lead">Alongside the conversations, Maria shares her own experiments. Where business meets design, then meets code. AI opened up possibilities that were unthinkable a few years ago, and this is where Maria plays: small web apps built to test an idea, or just for fun, and shipped for anyone to try.</p></div>
+      <span class="soon">Coming soon</span>
+    </div>
+    <div class="apps">
+      <div class="app"><div class="t"><h3>Booking</h3><p>Description coming soon.</p></div></div>
+      <div class="app"><div class="t"><h3>Reading</h3><p>Description coming soon.</p></div></div>
+      <div class="app"><div class="t"><h3>Playing</h3><p>Description coming soon.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap host">
+    <img src="art/face-maria.jpg" alt="Maria Matloub">
+    <div><p class="eyebrow">Your host</p><h2>Maria Matloub</h2><p class="lead">GGUTT is her media and lab. To work with her, visit her website.</p></div>
+    <a class="btn pink" href="https://mariamatloub.com">Work with Maria →</a>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© GGUTT</span><span><a href="https://open.spotify.com/show/3f6umKidYdhdoPnxUMQM2e">Spotify</a> · <a href="https://podcasts.apple.com/us/podcast/gguttalks/id1546998038">Apple Podcasts</a> · <a href="https://www.youtube.com/@ggutt_hub">YouTube</a> · <a href="https://www.tiktok.com/@maria_ggutt">TikTok</a></span></div></footer>
+
+<script>
+// guest library: most known guests first, alternating between the two rows
+const guests=[{"n": "Joseph Pine", "img": "art/covers/joseph-pine.jpg", "url": "https://ggutt.substack.com/p/competing-for-customer-time-attention-d48", "cover": "art/covers/joseph-pine.jpg"}, {"n": "Eric Quint", "img": "art/covers/eric-quint.jpg", "url": "https://ggutt.substack.com/p/secrets-to-leading-creative-teams", "cover": "art/covers/eric-quint.jpg"}, {"n": "Keith Teare", "img": "art/covers/keith-teare.jpg", "url": "https://ggutt.substack.com/p/keith-teare-on-ais-real-future-and-965", "cover": "art/covers/keith-teare.jpg"}, {"n": "Simon Squibb", "img": "art/covers/simon-squibb.jpg", "url": "https://www.youtube.com/watch?v=ylgVwQiLSb8", "cover": "art/covers/simon-squibb.jpg"}, {"n": "Bernard Moon", "img": "art/covers/bernard-moon.jpg", "url": "https://ggutt.substack.com/p/74-from-public-policy-to-entrepreneurship-9e0", "cover": "art/covers/bernard-moon.jpg"}, {"n": "Nicole Glaros", "img": "art/covers/nicole-glaros.jpg", "url": "https://ggutt.substack.com/p/88-entrepreneurship-to-get-out-of", "cover": "art/covers/nicole-glaros.jpg"}, {"n": "Jacob Cass", "img": "art/covers/jacob-cass.jpg", "url": "https://www.youtube.com/watch?v=ZXrbJK0kktQ", "cover": "art/covers/jacob-cass.jpg"}, {"n": "Alain Visser", "img": "art/covers/alain-visser.jpg", "url": "https://ggutt.substack.com/p/83-revolutionizing-mobility-car-sharing-6ce", "cover": "art/covers/alain-visser.jpg"}, {"n": "Angela Shen-Hsieh", "img": "art/covers/angela-shen-hsieh.jpg", "url": "https://ggutt.substack.com/p/93-from-architecture-to-entrepreneurship", "cover": "art/covers/angela-shen-hsieh.jpg"}, {"n": "Gianluca Brugnoli", "img": "art/covers/gianluca-brugnoli.jpg", "url": "https://ggutt.substack.com/p/76-design-internet-revolution-the-c46", "cover": "art/covers/gianluca-brugnoli.jpg"}, {"n": "Paolo Ciuccarelli", "img": "art/covers/paolo-ciuccarelli.jpg", "url": "https://ggutt.substack.com/p/87-data-visualization-ai-technology", "cover": "art/covers/paolo-ciuccarelli.jpg"}, {"n": "Gerry Scullion", "img": "art/covers/gerry-scullion.jpg", "url": "https://ggutt.substack.com/p/gguttalks-being-a-designer-money-08e", "cover": "art/covers/gerry-scullion.jpg"}, {"n": "Luis Arnal", "img": "art/covers/luis-arnal.jpg", "url": "https://ggutt.substack.com/p/what-is-the-role-of-designers-inout-a70", "cover": "art/covers/luis-arnal.jpg"}, {"n": "Arne van Oosterom", "img": "art/covers/arne-van-oosterom.jpg", "url": "https://www.youtube.com/watch?v=p-vMYlhPnrE", "cover": "art/covers/arne-van-oosterom.jpg"}, {"n": "Stella Lee", "img": "art/covers/stella-lee.jpg", "url": "https://ggutt.substack.com/p/95-what-artificial-intelligence-means", "cover": "art/covers/stella-lee.jpg"}, {"n": "Judy Rees", "img": "art/covers/judy-rees.jpg", "url": "https://www.youtube.com/watch?v=2OSmVZLUbaM", "cover": "art/covers/judy-rees.jpg"}, {"n": "Renatus Hoogenraad", "img": "art/covers/renatus-hoogenraad.jpg", "url": "https://www.youtube.com/watch?v=Gm2enLWM-E0", "cover": "art/covers/renatus-hoogenraad.jpg"}, {"n": "Avril Millar", "img": "art/covers/avril-millar.jpg", "url": "https://ggutt.substack.com/p/gguttalks-from-bullht-detector-to-b17", "cover": "art/covers/avril-millar.jpg"}, {"n": "Walid Mansour", "img": "art/covers/walid-mansour.jpg", "url": "https://ggutt.substack.com/p/entrepreneurship-in-mena-gcc-social", "cover": "art/covers/walid-mansour.jpg"}, {"n": "Patrick Flesner", "img": "art/covers/patrick-flesner.jpg", "url": "https://ggutt.substack.com/p/gguttalks-cracking-the-leadership-346", "cover": "art/covers/patrick-flesner.jpg"}, {"n": "Adam Lawrence", "img": "art/covers/adam-lawrence.jpg", "url": "https://www.youtube.com/watch?v=xEAC8nurC6M", "cover": "art/covers/adam-lawrence.jpg"}, {"n": "Roberta Tassi", "img": "art/covers/roberta-tassi.jpg", "url": "https://ggutt.substack.com/p/79-launching-service-design-tools-9d7", "cover": "art/covers/roberta-tassi.jpg"}, {"n": "Aadeel Akhtar", "img": "art/covers/aadeel-akhtar.jpg", "url": "https://www.youtube.com/watch?v=lfhIjvk9Dxc", "cover": "art/covers/aadeel-akhtar.jpg"}, {"n": "Alberto Emprin", "img": "art/covers/alberto-emprin.jpg", "url": "https://ggutt.substack.com/p/what-is-the-angel-investing-mindset-124", "cover": "art/covers/alberto-emprin.jpg"}, {"n": "Ana Kyra Bekš", "img": "art/covers/ana-kyra-beks.jpg", "url": "https://www.youtube.com/watch?v=xhVFmv1BX8I", "cover": "art/covers/ana-kyra-beks.jpg"}, {"n": "Anna Bigornia", "img": "art/covers/anna-bigornia.jpg", "url": "https://www.youtube.com/watch?v=bzlgsbPRpS0", "cover": "art/covers/anna-bigornia.jpg"}, {"n": "Annamaria Tartaglia", "img": "art/covers/annamaria-tartaglia.jpg", "url": "https://www.youtube.com/watch?v=Pb8HCel7dQo", "cover": "art/covers/annamaria-tartaglia.jpg"}, {"n": "Arash Golnam", "img": "art/covers/arash-golnam.jpg", "url": "https://www.youtube.com/watch?v=-bs56oeTp9E", "cover": "art/covers/arash-golnam.jpg"}, {"n": "Blake Goud", "img": "art/covers/blake-goud.jpg", "url": "https://www.youtube.com/watch?v=DVY0Ax4VSZg", "cover": "art/covers/blake-goud.jpg"}, {"n": "Calum Cameron", "img": "art/covers/calum-cameron.jpg", "url": "https://ggutt.substack.com/p/ep98s3-the-journey-from-australia-18e", "cover": "art/covers/calum-cameron.jpg"}, {"n": "Dr. Caroline Szymanski", "img": "art/covers/dr-caroline-szymanski.jpg", "url": "https://www.youtube.com/watch?v=xhVFmv1BX8I", "cover": "art/covers/dr-caroline-szymanski.jpg"}, {"n": "Charles-Louis de Maere", "img": "art/covers/charles-louis-de-maere.jpg", "url": "https://ggutt.substack.com/p/94-from-agile-coach-to-facilitator", "cover": "art/covers/charles-louis-de-maere.jpg"}, {"n": "Christian Vatter", "img": "art/covers/christian-vatter.jpg", "url": "https://ggutt.substack.com/p/ep129s3-from-sherlock-holmes-to-spaces-167", "cover": "art/covers/christian-vatter.jpg"}, {"n": "Daniel Patterson", "img": "art/covers/daniel-patterson.jpg", "url": "https://ggutt.substack.com/p/ep92s3-building-brands-between-confidence-ae1", "cover": "art/covers/daniel-patterson.jpg"}, {"n": "Daniel Zaretsky", "img": "art/covers/daniel-zaretsky.jpg", "url": "https://ggutt.substack.com/p/what-to-know-about-business-in-central-4af", "cover": "art/covers/daniel-zaretsky.jpg"}, {"n": "Darrell Coker", "img": "art/covers/darrell-coker.jpg", "url": "https://ggutt.substack.com/p/how-to-pivot-your-startup-in-times-ff4", "cover": "art/covers/darrell-coker.jpg"}, {"n": "Dina Shoman", "img": "art/covers/dina-shoman.jpg", "url": "https://www.youtube.com/watch?v=erjX5kSKV4U", "cover": "art/covers/dina-shoman.jpg"}, {"n": "Drop Music Branding", "img": "art/covers/drop-music-branding.jpg", "url": "https://www.youtube.com/watch?v=12SCppPRGYs", "cover": "art/covers/drop-music-branding.jpg"}, {"n": "Elisa Chiodo, PhD", "img": "art/covers/elisa-chiodo-phd.jpg", "url": "https://www.youtube.com/watch?v=vUGDmAHWSYQ", "cover": "art/covers/elisa-chiodo-phd.jpg"}, {"n": "Emil Abirascid", "img": "art/covers/emil-abirascid.jpg", "url": "https://ggutt.substack.com/p/how-to-scale-up-startup-ventures-924", "cover": "art/covers/emil-abirascid.jpg"}, {"n": "Fabian Gems", "img": "art/covers/fabian-gems.jpg", "url": "https://ggutt.substack.com/p/80-from-diplomat-to-founder-sales-cb6", "cover": "art/covers/fabian-gems.jpg"}, {"n": "Francesco Fiore", "img": "art/covers/francesco-fiore.jpg", "url": "https://www.youtube.com/watch?v=P3DqPgoxeHo", "cover": "art/covers/francesco-fiore.jpg"}, {"n": "Freddie Öst", "img": "art/covers/freddie-ost.jpg", "url": "https://ggutt.substack.com/p/78-how-to-make-enemies-and-gain-fans-134", "cover": "art/covers/freddie-ost.jpg"}, {"n": "Jaan Viru", "img": "art/covers/jaan-viru.jpg", "url": "https://www.youtube.com/watch?v=sWRjYfRsan4", "cover": "art/covers/jaan-viru.jpg"}, {"n": "Jakob Knutzen", "img": "art/covers/jakob-knutzen.jpg", "url": "https://ggutt.substack.com/p/ep115s3-jakobs-journey-leading-to-b0b", "cover": "art/covers/jakob-knutzen.jpg"}, {"n": "Jane Schek", "img": "art/covers/jane-schek.jpg", "url": "https://ggutt.substack.com/p/gguttalks-the-language-around-research-90b", "cover": "art/covers/jane-schek.jpg"}, {"n": "Jeff Cooper", "img": "art/covers/jeff-cooper.jpg", "url": "https://ggutt.substack.com/p/77-waste-management-stories-extended-417"}, {"n": "Jeffrey Abbot", "img": "art/covers/jeffrey-abbot.jpg", "url": "https://open.spotify.com/show/3f6umKidYdhdoPnxUMQM2e", "cover": "art/covers/jeffrey-abbot.jpg"}, {"n": "Jessica Robinson", "img": "art/covers/jessica-robinson.jpg", "url": "https://www.youtube.com/watch?v=8rhjQwa90cg", "cover": "art/covers/jessica-robinson.jpg"}, {"n": "John Haddad", "img": "art/covers/john-haddad.jpg", "url": "https://ggutt.substack.com/p/gguttalks-breaking-boundaries-in-439", "cover": "art/covers/john-haddad.jpg"}, {"n": "Jonathan Griffin, PhD", "img": "art/covers/jonathan-griffin-phd.jpg", "url": "https://www.youtube.com/watch?v=x9RQLW-5kGA", "cover": "art/covers/jonathan-griffin-phd.jpg"}, {"n": "Kamal Al Samarrai", "img": "art/covers/kamal-al-samarrai.jpg", "url": "https://www.youtube.com/watch?v=erjX5kSKV4U", "cover": "art/covers/kamal-al-samarrai.jpg"}, {"n": "Kamal Hassan", "img": "art/covers/kamal-hassan.jpg", "url": "https://www.youtube.com/watch?v=AJhauF8sTXw", "cover": "art/covers/kamal-hassan.jpg"}, {"n": "Konstantinos Synodinos", "img": "art/covers/konstantinos-synodinos.jpg", "url": "https://www.youtube.com/watch?v=wFQ7dZYXcC8", "cover": "art/covers/konstantinos-synodinos.jpg"}, {"n": "Margie Ong", "img": "art/covers/margie-ong.jpg", "url": "https://www.youtube.com/watch?v=NMVP6uu4J3o", "cover": "art/covers/margie-ong.jpg"}, {"n": "Margus Klaar", "img": "art/covers/margus-klaar.jpg", "url": "https://www.youtube.com/watch?v=jtNVi5O-Cbo", "cover": "art/covers/margus-klaar.jpg"}, {"n": "Marie-Pierre Schickel", "img": "art/covers/marie-pierre-schickel.jpg", "url": "https://www.youtube.com/watch?v=VUWYlPOxGUk", "cover": "art/covers/marie-pierre-schickel.jpg"}, {"n": "Matteo Antony Mistretta", "img": "art/covers/matteo-antony-mistretta.jpg", "url": "https://ggutt.substack.com/p/coding-for-good-with-matteo-antony-549", "cover": "art/covers/matteo-antony-mistretta.jpg"}, {"n": "Nina Schacht", "img": "art/covers/nina-schacht.jpg", "url": "https://ggutt.substack.com/p/gguttalks-the-language-around-research-90b", "cover": "art/covers/nina-schacht.jpg"}, {"n": "Omar Al Sharif", "img": "art/covers/omar-al-sharif.jpg", "url": "https://www.youtube.com/watch?v=erjX5kSKV4U", "cover": "art/covers/omar-al-sharif.jpg"}, {"n": "Pieter Louw", "img": "art/covers/pieter-louw.jpg", "url": "https://ggutt.substack.com/p/how-to-reopen-the-economy-with-pieter-3f9", "cover": "art/covers/pieter-louw.jpg"}, {"n": "Péter Kovács", "img": "art/covers/peter-kovaks.jpg", "url": "https://www.youtube.com/watch?v=fErM94dYHGo", "cover": "art/covers/peter-kovaks.jpg"}, {"n": "Ravi Chidambaram", "img": "art/covers/ravi-chidambaram.jpg", "url": "https://ggutt.substack.com/p/how-can-startups-corporates-and-smes-0d8", "cover": "art/covers/ravi-chidambaram.jpg"}, {"n": "Robert Pallas", "img": "art/covers/robert-pallas.jpg", "url": "https://ggutt.substack.com/p/gguttalks-journey-in-blockchain-ai-b5c", "cover": "art/covers/robert-pallas.jpg"}, {"n": "Shamir Joseph", "img": "art/covers/shamir-joseph.jpg", "url": "https://www.youtube.com/watch?v=zyz5vuWkCrM", "cover": "art/covers/shamir-joseph.jpg"}, {"n": "Silia Abou Arbid", "img": "art/covers/silia-abou-arbid.jpg", "url": "https://ggutt.substack.com/p/design-creativity-ai-imagination", "cover": "art/covers/silia-abou-arbid.jpg"}, {"n": "Sissel Hansen", "img": "art/covers/sissel-hansen.jpg", "url": "https://www.youtube.com/watch?v=LA5jJsrhedM", "cover": "art/covers/sissel-hansen.jpg"}, {"n": "Stuart Hutton", "img": "art/covers/stuart-hutton.jpg", "url": "https://www.youtube.com/watch?v=5DTbX913Rao", "cover": "art/covers/stuart-hutton.jpg"}, {"n": "Tim Kahle", "img": "art/covers/tim-kahle.jpg", "url": "https://www.youtube.com/watch?v=pIlBLaqFpfE", "cover": "art/covers/tim-kahle.jpg"}, {"n": "Vincenzo Di Maria", "img": "art/covers/vincenzo-di-maria.jpg", "url": "https://www.youtube.com/watch?v=hV4mxnjYGRQ", "cover": "art/covers/vincenzo-di-maria.jpg"}, {"n": "Vladimira Mesko Briestenska", "img": "art/covers/vladimira-mesko-briestenska.jpg", "url": "https://www.youtube.com/watch?v=lN_qZ9dmsKM", "cover": "art/covers/vladimira-mesko-briestenska.jpg"}, {"n": "Yasuhisa Hasegawa", "img": "art/covers/yasuhisa-hasegana.jpg", "url": "https://www.youtube.com/watch?v=hyWqZeH55I0", "cover": "art/covers/yasuhisa-hasegana.jpg"}];
+const face=(g,i)=>`<a class="cover" href="${g.url}" target="_blank" rel="noopener" title="${g.n}"><img src="${g.img}" alt="${g.n}" width="220" height="220" ${i<14?'':'loading="lazy"'}></a>`;
+const r1=guests.filter((_,i)=>i%2===0), r2=guests.filter((_,i)=>i%2===1);
+[[r1,'r1'],[r2,'r2']].forEach(([l,id])=>{const el=document.getElementById(id);const h=l.map(face).join('');el.innerHTML=h+h;
+  const set=()=>{el.style.animationDuration=(el.scrollWidth/2/(innerWidth<700?40:60))+'s'};set();window.addEventListener('resize',set);});
+</script>
+</body>
+</html>
